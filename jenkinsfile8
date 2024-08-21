@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                bat 'javac Hello8.java'
+            }
+        }
+        stage('run') {
+            steps {
+                bat 'java Hello8'
+            }
+        }
+    }
+}
